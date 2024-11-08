@@ -36,6 +36,8 @@ actions touch {
 
 rule can-symlink ( project )
 {
+    .can-symlink = false ;
+    return false ;
     if ! $(.can-symlink)
     {
         local root-project = [ get-root-project $(project) ] ;
